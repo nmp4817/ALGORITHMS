@@ -26,6 +26,6 @@ def insertion(arr):
 
 
 if __name__ == '__main__':
-	arr = [7,4,9,6,5,3,19,37,1]
+	arr = [7,4,9,6,5,3,19,37,1,6,9,5]
 	print 'Original: ',arr
 	insertion(arr)
