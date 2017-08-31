@@ -7,6 +7,7 @@ def fibonacci(n):
 
 if __name__ == '__main__':
 	n = raw_input("Enter the limit: ")
+	# result = fibonacci(int(n))
 	result = []
 	for i in range(0,int(n)) :
 		result.append(fibonacci(i))
