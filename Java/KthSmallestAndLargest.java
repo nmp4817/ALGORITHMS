@@ -2,7 +2,6 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
 import sorting.QuickSort;
-// import MedianOfMedians;
      
 public class KthSmallestAndLargest {
 	public static void main(String[] args) {
