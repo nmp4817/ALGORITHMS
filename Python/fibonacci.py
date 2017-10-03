@@ -12,6 +12,15 @@ def fibonacci(n):
 #         return b
 #     return fibonacci(n-1,b,a+b)
 
+# # Dynamic Programming
+# fib_list = [0,1]
+# def fibonacci(n):
+#     if n < len(fib_list):
+#         return fib_list[n]
+#     else:
+#         ans = fibonacci(n-1) + fibonacci(n-2)
+#         fib_list.append(ans)
+#         return ans
 
 if __name__ == '__main__':
 	n = raw_input("Enter the limit: ")
