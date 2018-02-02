@@ -15,18 +15,22 @@
 
 #Insertion sort : compare ith element to elements from 0 to i-1 (i.e put arr[i] into Sorted array arr[0:i-1])
 
-def insertion(arr):
-	for i in range(1,len(arr)):
+def insertion(arr):                                                       #O(n^2)
+	for i in range(1,len(arr)):                                           #O(n) elements
 		key = arr[i]
 		j = i-1
-		while j>=0 and arr[j]>key:
-			arr[j+1] = arr[j]
+		while j>=0 and arr[j]>key:                                        #O(n) swaps
+			# arr[j+1],arr[j] = arr[j],key                                #swapping immidiately
+			arr[j+1] = arr[j]			
 			j = j-1
 		arr[j+1] = key
 	print 'Sorted: ',arr
 
-
-if __name__ == '__main__':
+def main():
 	arr = [7,4,9,6,5,3,19,37,1,6,9,5]
 	print 'Original: ',arr
 	insertion(arr)
+
+if __name__ == '__main__':
+	import profile
+	profile.run("main()")	
