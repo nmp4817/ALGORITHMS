@@ -14,6 +14,7 @@
 
 
 #Insertion sort : compare ith element to elements from 0 to i-1 (i.e put arr[i] into Sorted array arr[0:i-1])
+#O(1) extra space
 
 def insertion(arr):                                                       #O(n^2)
 	for i in range(1,len(arr)):                                           #O(n) elements
