@@ -6,14 +6,14 @@ n = 0
 m = 0
 
 #Greedy Ascent Algorithm
-def peak_finder1(i,j):                      #Time Complexity: T(n) = T(n/4) + O(1) = O(n^2)
-	if i > 0 and arr[i - 1][j] > arr[i][j]:
+def peak_finder1(i,j):                                 #Time Complexity: T(n) = T(n/4) + O(1) = O(n^2)
+	if i > 0 and arr[i - 1][j] > arr[i][j]:            #up side element bigger
 		return peak_finder1(i - 1, j)
-	elif i < n - 1 and arr[i + 1][j] > arr[i][j]:
+	elif i < n - 1 and arr[i + 1][j] > arr[i][j]:      #below side element bigger
 		return peak_finder1(i + 1, j)
-	elif j > 0 and arr[i][j - 1] > arr[i][j]:
+	elif j > 0 and arr[i][j - 1] > arr[i][j]:          #left side element bigger
 		return peak_finder1(i, j - 1);
-	elif j < m - 1 and arr[i][j + 1] > arr[i][j]:
+	elif j < m - 1 and arr[i][j + 1] > arr[i][j]:      #right side element bigger
 		return peak_finder1(i, j + 1);
 	else:
 		return arr[i][j];
